@@ -42,6 +42,11 @@ a {
 .container {
   padding: 2.4rem 6rem;
 }
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* ? Navigation */
 .nav {
   position: fixed;
@@ -50,6 +55,7 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  z-index: 10;
 }
 .nav-brand {
   font-family: 'Crimson Pro', serif;
@@ -91,11 +97,11 @@ a {
 }
 /* ? Main */
 main {
-  margin-top: 14rem;
+  margin-top: 10rem;
 }
 .hero {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1.5fr;
   gap: 13rem;
   align-items: center;
 }
@@ -133,19 +139,57 @@ main {
   right: 0;
   transform: translate(150%, 50%);
 }
-.hero-img-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.hero-img-container {
+  position: relative;
 }
 .caption-box {
-  display: none;
+  position: absolute;
+  width: 40rem;
+  bottom: 0;
+  right: 0;
+  transform: translate(-10%, 50%);
+  padding: 3.2rem 2.4rem;
+  background: var(--dark);
+  color: var(--light);
+  box-shadow: 0.3rem 0.2rem 0.5rem #000000;
+}
+.caption-profile {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+.caption-pfp-container {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.profile-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.profile-name {
+  font-size: 1.4rem;
+}
+.profile-title {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+.caption-heading {
+  font-family: 'Lora', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  width: 70%;
 }
 /* ? Footer */
 footer {
   text-align: center;
   padding: 1.2rem 2.4rem;
-  margin-top: 4.8rem;
+  margin-top: 8rem;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
