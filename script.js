@@ -9,6 +9,8 @@ openNavBtn.addEventListener('click', () => {
 closeNavBtn.addEventListener('click', () => {
   mobileNav.classList.remove('open');
 });
-navLinks.addEventListener('click', () => {
-  mobileNav.classList.remove('open');
+navLinks.forEach(navLink => {
+  navLink.addEventListener('click', () => {
+    mobileNav.classList.remove('open');
+  });
 });
