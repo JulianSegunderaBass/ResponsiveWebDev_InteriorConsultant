@@ -57,6 +57,7 @@ img {
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+  background: var(--dark);
 }
 .nav-brand {
   font-family: 'Crimson Pro', serif;
@@ -102,7 +103,7 @@ main {
 }
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
   gap: 13rem;
   align-items: center;
 }
@@ -121,6 +122,7 @@ main {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 2.4rem;
+  width: 80%;
 }
 .hero-cta {
   font-family: 'Montserrat', sans-serif;
@@ -145,11 +147,11 @@ main {
 }
 .caption-box {
   position: absolute;
-  width: 40rem;
+  width: 35rem;
   bottom: 0;
   right: 0;
   transform: translate(-10%, 50%);
-  padding: 3.2rem 2.4rem;
+  padding: 2.8rem 2.2rem;
   background: var(--dark);
   color: var(--light);
   box-shadow: 0.3rem 0.2rem 0.5rem #000000;
@@ -184,7 +186,7 @@ main {
   font-family: 'Lora', serif;
   font-size: 2.4rem;
   font-weight: 700;
-  width: 70%;
+  width: 80%;
 }
 /* ? Footer */
 footer {
@@ -274,6 +276,41 @@ footer {
   .caption-heading {
     font-family: 'Lora', serif;
     font-size: 1.8rem;
+    font-weight: 700;
+    width: 70%;
+  }
+  .hero-text {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-heading {
+    font-size: 3rem;
+  }
+  .hero-text {
+    font-size: 2rem;
+  }
+  .caption-box {
+    width: 20rem;
+    padding: 1.6rem 1.2rem;
+  }
+  .caption-pfp-container {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .profile-name {
+    font-size: 1.2rem;
+  }
+  .profile-title {
+    font-size: 1rem;
+    color: var(--gray);
+  }
+  .caption-heading {
+    font-family: 'Lora', serif;
+    font-size: 1.4rem;
     font-weight: 700;
     width: 70%;
   }
